@@ -165,9 +165,7 @@ If that is not set, then the system default will be used.
 		CharacterRule(openTag: "_", intermediateTag: nil, closingTag: nil, escapeCharacter: "\\", styles: [1 : [CharacterStyle.italic], 2 : [CharacterStyle.bold], 3 : [CharacterStyle.bold, CharacterStyle.italic]], maxTags: 3)
 	]
 	
-	static public var frontMatterRules = [
-		FrontMatterRule(openTag: "---", closeTag: "---", keyValueSeparator: ":")
-	]
+	static public var frontMatterRules = [FrontMatterRule]()
 	
 	let lineProcessor = SwiftyLineProcessor(rules: SwiftyMarkdown.lineRules, defaultRule: MarkdownLineStyle.body, frontMatterRules: SwiftyMarkdown.frontMatterRules)
 	let tokeniser = SwiftyTokeniser(with: SwiftyMarkdown.characterRules)
